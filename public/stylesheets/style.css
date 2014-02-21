@@ -1,0 +1,27 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.testDiv
+{
+
+}
+
+#div_test1
+{
+	position: relative;
+	width:100px;
+	height: 200px;
+}
+
+#div_test2
+{
+	position: relative;
+	width:50px;
+	height: 200px;
+}
