@@ -38,6 +38,7 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/users', user.list);
+app.get('/testmecab', user.testmecab);
 app.get('/testhttp', user.testhttp);
 
 /*

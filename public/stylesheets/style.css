@@ -17,6 +17,7 @@ a {
 	position: relative;
 	width:100px;
 	height: 200px;
+	left: -100px;
 }
 
 #div_test2
@@ -24,4 +25,5 @@ a {
 	position: relative;
 	width:50px;
 	height: 200px;
+	left: -100px;
 }
