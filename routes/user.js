@@ -53,6 +53,7 @@ exports.testmecab = function(req, res)
             }
             console.log("Segmentation finished");
             console.log(finalResultArr);
+            //console.log(JSON.stringify(finalResultArr));
 
             res.send(finalResultArr);
         });

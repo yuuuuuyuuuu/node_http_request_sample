@@ -47,7 +47,7 @@ $(document).ready(function(){
     var options = {
     	url : urlTest,
     	method: "GET",
-    	dataType: "xml",
+    	dataType: "text",
     	success: onSuccess,
     	error: onError,
     	complete: onComplete,
@@ -87,24 +87,35 @@ function doBezierAnimation(targetJqObj)
 function onSuccess(data, dataType)
 {
 	console.log("onSuccess");
-	//console.log(data);
-	console.log(dataType);
+	// console.log(data);
+	//console.log(dataType);
 
-	var jsonObj = JSON.parse(data);
-	console.log(jsonObj);
+	var converted = JSON.parse(data);
 
-    var ma_result = jsonObj["ResultSet"].ma_result;
-	var ma_result_words = jsonObj["ResultSet"].ma_result.word_list.word;
-	console.log(ma_result_words);
-	console.log(ma_result_words["0"]);
+	//console.log(converted.length);
 
-	var totalCount = ma_result.total_count;
-	console.log("totalcount:" + totalCount);
-
-	for(var i = 0; i < Number(totalCount); i++)
+	for(var i = 0; i < converted.length; i++)
 	{
-		console.log(ma_result_words[String(i)]);
+		var line = converted[i];
+		console.log(line);
+
+		var word = line[0];
+		var type1 = line[1];
+		var type2 = line[3];
+
+		var wordSimilar = line[7];
+		var wordSimilar1 = line[8];
+		var wordSimilar2 = line[9];
+
+		console.log(word);
+		console.log(type1);
+		console.log(type2);
+
+		console.log(wordSimilar);
+		console.log(wordSimilar1);
+		console.log(wordSimilar2);
 	}
+
 }
 
 function onError(XMLHttpRequest, textStatus, errorThrown)
